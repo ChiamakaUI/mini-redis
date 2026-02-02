@@ -65,6 +65,3 @@ async fn handle_client(socket: TcpStream, store: Arc<Store<String>>) {
         }
     }
 }
-
-// Arc<RwLock<HashMap<String, String>>>
-// let store: Arc<RwLock<HashMap<String, String>>> = Arc::new(RwLock::new(HashMap::new()));

@@ -57,11 +57,3 @@ where
     }
 }
 
-// impl StoreValue {
-//     pub fn run<S>(&self, storage: &S)
-//     where
-//         S: Storage
-//     {
-//         // self.key
-//     }
-// }
