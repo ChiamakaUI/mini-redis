@@ -1,0 +1,10 @@
+Mini Redis Clone (covers: traits, generics, smart pointers, concurrency, async)
+Build a simple in-memory key-value store with:
+
+- A Storage trait with get, set, delete methods
+- Generic value types with trait bounds
+- Arc<RwLock<HashMap>> for thread-safe shared state
+- TCP server handling multiple concurrent clients
+- Commands parsed via pattern matching
+
+- Benchmark against Redis - https://github.com/redis/memtier_benchmark
