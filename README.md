@@ -17,6 +17,8 @@ It supports basic Redis-style commands over TCP and is designed as a learning pr
   - `SET key value`
   - `GET key`
   - `DEL key`
+  - `EXISTS key`
+  - `PING`
 
 ## Architecture
 ### Core Components

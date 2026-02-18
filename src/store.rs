@@ -3,6 +3,8 @@ pub enum Command {
     Get(String),
     Set(String, String),
     Del(String),
+    Exists(String),
+    Ping,
     Unknown,
 }
 
@@ -14,6 +16,8 @@ impl Command {
             ["GET", key] => Command::Get(key.to_string()),
             ["SET", key, val] => Command::Set(key.to_string(), val.to_string()),
             ["DEL", key] => Command::Del(key.to_string()),
+            ["EXISTS", key] => Command::Exists(key.to_string()),
+            ["PING"] => Command::Ping,
             _ => Command::Unknown,
         }
     }
@@ -56,4 +60,3 @@ where
         map.remove(key).is_some()
     }
 }
-

@@ -46,6 +46,14 @@ async fn handle_client(socket: TcpStream, store: Arc<Store<String>>) {
                             "(integer) 0".to_string()
                         }
                     }
+                    Command::Exists(key) => {
+                        if store.get(&key).is_some() {
+                            "(integer) 1".to_string()
+                        } else {
+                            "(integer) 0".to_string()
+                        }
+                    },
+                    Command::Ping => "PONG".to_string(),
                     Command::Unknown => "ERR unknown command".to_string(),
                 };
 
